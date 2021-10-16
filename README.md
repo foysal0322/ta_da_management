@@ -18,6 +18,19 @@
 	1.add (/admin) right after your homepage url  ( Ex:http://127.0.0.1:8000/admin )
 	2.user_name: admin
 	3.password:  admin
+	
+# Screenshots
+## Home page
+![](screenshots/Screenshot(2).png)
+
+## TaDa History page
+![](screenshots/Screenshot(3).png)
+
+## Admin panel
+![](screenshots/Screenshot(4).png)
+
+## Downloaded pdf file
+![](screenshots/Screenshot(1).png)
     
   
    
