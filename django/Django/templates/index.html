@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %}Home {% endblock title %}
+{% block body %}
+
+<div class="container">
+  <h3 align='center' ,margin-bottom:20px;>TADA ENTRY</h3>
+  <style type="text/css">
+    label {
+      width: 120px;
+      display: inline-block;
+
+    }
+
+    input {
+      width: 220px;
+      height: 40px
+    }
+
+    select {
+      width: 220px;
+      height: 40px
+    }
+
+    .container {
+      margin-top: 80px;
+      width: 60%;
+      /* border: 3px solid #73AD21; */
+      padding: 50px;
+      background-color: rgb(127, 196, 121);
+      text-align: center;
+      margin-bottom: 100px;
+
+    }
+  </style>
+  <form method="POST" action="/">
+    {% csrf_token %}
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required><br> <br>
+
+    <label for="employee_Name">Employee Name:</label>
+
+    <select id="emp_name" name="emp_name" required>
+      <!-- fetching employee name from given 'Employee' table -->
+      <option value="">Select</option>    
+      {% for i in emp%}           
+      <option value="{{i.emp_name}}">{{i.emp_name}}</option>
+      {% endfor %}
+
+    </select><br><br>
+
+    <label for="travel_cost">Travel Cost:</label>
+    <input type="number" id="tr_cost" name="tr_cost" autocomplete="off" step='any' required> <br> <br>
+
+
+    <label for="lunch_cost">Lunch Cost:</label>
+    <input type="number" id="ln_cost" name="ln_cost" autocomplete="off" step='any' required><br> <br>
+
+    <label for="instrumnet_cost">Instrumnet Cost:</label>
+    <input type="number" id="instru_cost" name="ins_cost" autocomplete="off" step='any' required><br> <br>
+
+  
+
+    <label for="ispaid">Paid:</label>
+    <select id="ispaid" name="ispaid">
+      <option value="Paid">Paid</option>
+      <option value="Unpaid">Unpaid</option>
+    </select><br><br>
+
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+<script>
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>
+
+
+
+
+{% endblock body %}

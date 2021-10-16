@@ -1,0 +1,60 @@
+
+
+<html>
+  <head>
+    <style>
+        table, td, th {
+          border: 1px solid rgb(0, 0, 0);
+          height:40px;
+          text-align:center;
+        }
+        
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        </style>
+
+
+
+   
+  </head>
+  <h3 style="text-align: center;">TaDa History</h3>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+         
+            <th scope="col">Date</th>
+            <th scope="col">Name</th>
+            <th scope="col">Travel cost</th>
+            <th scope="col">Lunch cost</th>
+            <th scope="col">Instrument cost</th>
+            <th scope="col">Total cost</th>
+            <th scope="col">Paid</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+
+        {%for i,j in data%} 
+          <tr>
+     
+            <td>{{i.date}}</td>
+            <td>{{i.emp_name}}</td>
+            <td>{{i.tr_cost}}</td>
+            <td>{{i.ln_cost}}</td>
+            <td>{{i.ins_cost}}</td>
+            <td>{{j}}</td>
+            <td>{{i.paid}}</td>
+            
+
+            
+          </tr>
+          {% endfor %} 
+
+        </tbody>
+      </table>
+
+      
+</html>
+
