@@ -9,7 +9,7 @@
 	2. install django and others requred library/packeges like:
 		=>django
 		=>xhtml (it might show error after installed. make some fine tune (upgrade/downgrade) with xhtml version as well as your python's verson.Hope it will fix.)
-	3. open command promp inside 'Django' folder directory (C:\Users\FoysalAhmed\Desktop\django\Django>)
+	3. open command promp inside 'Django' folder directory (C:\Users\FoysalAhmed\Desktop\ta_da_management-main\django\Django>)
 	4. write: (python manage.py runserver)  and press Enter
 	5. it will display some texts including an url, clik on it or manually type the address on your browser.
 	6. Enjoy
